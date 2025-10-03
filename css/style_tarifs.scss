@@ -64,11 +64,11 @@ main {
   background: #FAF7F2;
 }
 
-.services h1, h2, .fil-ariane {
+.tarifs h1, h2, .fil-ariane {
   text-align: center;
 }
 
-.services h1 {
+.tarifs h1 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   padding: 80px 0px 60px 0px;
@@ -76,7 +76,7 @@ main {
   text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-.services h2 {
+.tarifs h2 {
   font-weight: lighter;
   margin: 100px 0px 60px 0px;
   color: $midnight;
@@ -115,60 +115,47 @@ main {
   width: 100%; /* le trait s’étend doucement */
 }
 
-.container {
+.tarifs-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
   max-width: 900px;
-  gap: 25px;
+  margin: auto;
 }
 
-.container img {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
+.tarif-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.tarif-card:hover {
+  transform: translateY(-5px);
+}
+
+.tarif-card h3 {
+  margin-bottom: 10px;
+}
+.tarif-card span {
   display: block;
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: $gold;
 }
 
-.item {
-  position: relative;              /* donne un repère à l’absolute */
-  overflow: hidden;                /* optionnel: coupe ce qui dépasse */
-  border-radius: 8px;              /* optionnel */
-}
-
-.item p {
-  position: absolute;
-  inset: 0;                        /* couvre toute l’image */
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(0,0,0,0.5);     /* voile sombre */
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: .5px;
-
-  opacity: 0;                      /* on cache avec l’opacité, pas display */
-  pointer-events: none;            /* ne bloque pas le hover */
-  transition: opacity .25s ease;   /* animation clean */
-}
-
-/* Affichage au survol du wrapper */
-.item:hover p,
-.item:focus-within p {             /* accessible au clavier/tactile */
-  opacity: 1;
-}
-
-/* Optionnel: léger zoom au survol */
-.item img {
-  transition: transform .4s ease;
-}
-.item:hover img { transform: scale(1.03); }
-
-.container:last-of-type {
+.tarifs-grid:last-of-type {
   padding-bottom: 100px;
 }
+
+
+
+
+
 
 footer {
   border-top: 2px $gold solid;
