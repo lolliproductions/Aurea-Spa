@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tarifs - Aurea Spa</title>
+    <title>Contact - Aurea Spa</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/style_tarifs.css">
+    <link rel="stylesheet" href="css/style_contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Prata&display=swap" rel="stylesheet">
@@ -32,118 +32,44 @@
 </header>
 
 <main>
-    <section class="tarifs">
-    <h1>Tarifs</h1>
+    <section class="contact">
+        <h1>Contact</h1>
 
-    <p class="fil-ariane"><a href="#massages">Massages</a> | <a href="#visage">Visage</a> | <a href="#pieds">Pieds</a> | 
-        <a href="#spa">Spa</a> | <a href="#packs">Packs</a></p>
-    <h2 id="massages">Massages</h2>
-    
-    <div class="tarifs-grid">
-  <div class="tarif-card">
-    <h3>Massage relaxant</h3>
-    <p>60 min</p>
-    <span>70€</span>
+        <div class="contact-info">
+  <div>
+    <h3>Adresse</h3>
+    <p>07 rue Quelquepart<br>70000 Ville</p>
   </div>
-  <div class="tarif-card">
-    <h3>Massage tonique</h3>
-    <p>60 min</p>
-    <span>75€</span>
+  <div>
+    <h3>Téléphone</h3>
+    <p>00 00 00 00 00</p>
   </div>
-  <div class="tarif-card">
-    <h3>Massage aux pierres chaudes</h3>
-    <p>75 min</p>
-    <span>90€</span>
-  </div>
-  <div class="tarif-card">
-    <h3>Massage aromathérapie</h3>
-    <p>60 min</p>
-    <span>75€</span>
+  <div>
+    <h3>Email</h3>
+    <p>demo@email.fr</p>
   </div>
 </div>
 
-<h2 id="visage">Soins du visage</h2>
-<div class="tarifs-grid">
-  <div class="tarif-card">
-    <h3>Gommage</h3>
-    <p>30 min</p>
-    <span>40€</span>
-  </div>
+        <form method="get" action="#">
 
-  <div class="tarif-card">
-    <h3>Massage du visage</h3>
-    <p>30 min</p>
-    <span>35€</span>
-    </div>
+        <div class="form-nom-email">
+                <div class="form-column">
+                   <label for="nom">Nom</label>
+                   <input type="text" name="nom" id="nom">
+                </div>
+                <div class="form-column">
+                   <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+        </div>
 
-    <div class="tarif-card">
-        <h3>Soin liftant</h3>
-        <p>60 min</p>
-        <span>75€</span>
-    </div>
-</div>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="10"></textarea>
 
-<h2 id="pieds">Soins des pieds</h2>
-<div class="tarifs-grid">
-  <div class="tarif-card">
-    <h3>Réflexologie plantaire</h3>
-    <p>45 min</p>
-    <span>55€</span>
-    </div>
-
-    <div class="tarif-card">
-        <h3>Bain de pieds</h3>
-        <p>20 min</p>
-        <span>20€</span>
-    </div>
-    </div>
-
-    <h2 id="spa">Spa</h2>
-<div class="tarifs-grid">
-  <div class="tarif-card">
-    <h3>Sauna</h3>
-    <p>30 min</p>
-    <span>20€</span>
-    </div>
-
-    <div class="tarif-card">
-        <h3>Hammam</h3>
-        <p>30 min</p>
-        <span>25€</span>
-    </div>
-
-    <div class="tarif-card">
-        <h3>Piscine</h3>
-        <p>2 heures</p>
-        <span>15€</span>
-    </div>
-</div>
-
-<h2 id="packs">Packs</h2>
-<div class="tarifs-grid">
-  <div class="tarif-card">
-    <h3>Espace bien-être (piscine, sauna, hammam)</h3>
-    <p>2 heures</p>
-    <span>35€</span>
-</div>
-
-<div class="tarif-card">
-<h3>Bain de pieds + Réflexologie plantaire</h3>
-<p>50 min</p>
-<span>60€</span>
-</div>
-
-<div class="tarif-card">
-    <h3>Gommage + massage relaxant</h3>
-    <p>90 min</p>
-    <span>95€</span>
-</div>
-</div>
-
-</section>
-
+                    <button type="submit" class="envoyer">Envoyer</button>
+</form>
+    </section>
 </main>
-
 
 
 <footer>

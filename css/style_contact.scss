@@ -64,93 +64,117 @@ main {
   background: #FAF7F2;
 }
 
-.tarifs h1, h2, .fil-ariane {
-  text-align: center;
-}
-
-.tarifs h1 {
+.contact h1 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  padding: 80px 0px 60px 0px;
+  padding: 80px 0px 120px 0px;
   color: $midnight;
   text-shadow: 0 2px 4px rgba(0,0,0,0.4);
-}
-
-.tarifs h2 {
-  font-weight: lighter;
-  margin: 100px 0px 60px 0px;
-  color: $midnight;
-}
-
-.fil-ariane {
-  font-size: 0.9em;
-  letter-spacing: 0.2em;
-  font-weight: lighter;
-}
-
-.fil-ariane a {
-  text-decoration: none;
-  color: black;
-  transition: letter-spacing 0.3s ease;
-  position: relative;
-  display: inline-block;
-}
-
-.fil-ariane a:hover {
-  letter-spacing: 0.3em;
-}
-
-.fil-ariane a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px; /* un peu sous le texte */
-  width: 0;
-  height: 1px;
-  background: black;
-  transition: width 0.3s ease;
-}
-
-.fil-ariane a:hover::after {
-  width: 100%; /* le trait s’étend doucement */
-}
-
-.tarifs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.tarif-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact {
+  padding-bottom: 100px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  text-align: center;
+  gap: 100px;
+}
+
+.contact-info h3 {
+  color: $gold;
+  margin-bottom: 8px;
+}
+
+input, textarea {
+    border: none;
+    border-radius: 3px;
+    padding:  15px;
+}
+
+.form-nom-email {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.form-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: white;
+    max-width: 900px;
+    background: $midnight;
+    padding: 50px;
+}
+
+.envoyer {
+  position: relative;
+  background: white;
+  width: 130px;
+  border-radius: 20px;
+  border: none;
+  color: black;
+  padding: 15px 0px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  margin: auto;
+  margin-top: 50px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1em;
   transition: transform 0.3s ease;
 }
 
-.tarif-card:hover {
-  transform: translateY(-5px);
+.envoyer:hover {
+  transform: scale(1.02);
 }
 
-.tarif-card h3 {
-  margin-bottom: 10px;
-}
-.tarif-card span {
-  display: block;
-  margin-top: 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: $gold;
+.envoyer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0;
+  background: $gold;
+  transform: translateX(-50%);
+  z-index: -1;
 }
 
-.tarifs-grid:last-of-type {
-  padding-bottom: 100px;
+.envoyer:hover::before {
+  animation: fillCenter 0.6s forwards;
 }
+
+@keyframes fillCenter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+textarea:focus, input:focus {
+  border: 2px $gold solid;
+  outline: none;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
 
 footer {
   border-top: 2px $gold solid;
