@@ -232,4 +232,72 @@ footer {
   font-size: 0.7em;
 }
 
+@media (max-width: 768px) {
+  /* HEADER */
+  header {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  .navbar_links {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    letter-spacing: 0.1em;
+  }
+  .image_logo {
+    width: 100px;
+  }
+  /* Services */
+  .container {
+    grid-template-columns: 1fr;
+    margin: auto 20px;
+  }
+  .container img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .item p {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.35); /* plus léger que sur hover */
+    font-size: 0.9em;
+  }
+  .item:hover p {
+    opacity: 1; /* désactive l'effet hover */
+  }
+  /* FOOTER */
+  .footer_top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .footer_left,
+  .footer_right {
+    margin: 15px 0;
+    max-width: 100%;
+  }
+  .footer_right h1 {
+    font-size: 1.2em;
+  }
+  .icones {
+    justify-content: center;
+  }
+  .footer_bottom {
+    font-size: 0.8em;
+    padding: 15px 0;
+  }
+  /* Ajustement global */
+  body {
+    overflow-x: hidden; /* empêche la bande blanche sur mobile */
+  }
+  .navbar_links li.logo {
+    order: -1; /* le logo passe en premier */
+    margin-bottom: 10px;
+  }
+  .navbar_links {
+    margin-bottom: 20px;
+  }
+}
+
 /*# sourceMappingURL=style_services.css.map */
