@@ -270,6 +270,7 @@ footer {
   form {
   max-width: 900px;
   margin: auto 20px;
+  padding: 25px;
 }
 
 input, textarea {
@@ -330,7 +331,7 @@ input, textarea {
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   form {
     margin: 0 35px;
   }

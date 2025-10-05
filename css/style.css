@@ -73,6 +73,15 @@ header {
   position: relative;
 }
 
+.introduction h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 60px 0px 120px 0px;
+  color: #0a2e4d;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
 .animate__animated {
   --animate-duration: 3s; /* durée de l’animation */
   --animate-delay: 2s; /* délai avant de commencer */
@@ -227,10 +236,13 @@ footer {
     padding: 0 15px;
   }
   /* INTRODUCTION */
+  .introduction h1 {
+    font-size: 1.4em;
+    padding: 40px 0 40px 0;
+  }
   .introduction_container {
     flex-direction: column; /* image au-dessus du texte */
     text-align: center;
-    gap: 20px;
   }
   .introduction img {
     width: 80%;
@@ -276,8 +288,7 @@ footer {
   }
   .introduction_container img {
     order: -1;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 40px;
     height: 230px;
     width: auto;
   }
