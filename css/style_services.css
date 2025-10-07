@@ -282,6 +282,9 @@ footer {
   }
   .icones {
     justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px 0 0 0;
   }
   .footer_bottom {
     font-size: 0.8em;
